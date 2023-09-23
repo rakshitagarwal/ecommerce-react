@@ -1,0 +1,38 @@
+.title{
+    color: white;
+    background-color: darkgray;
+    padding: 20px;
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 32px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.subtitle{
+    font-weight: 600;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+}
+
+.description img{
+    height: 200px;
+    padding: 10px;
+    border-radius: 50%;
+    
+
+}
+
+.about{
+    width: 60%;
+}

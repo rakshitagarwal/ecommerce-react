@@ -1,5 +1,7 @@
-import React, { useContext, useState } from "react";
-import CartContext from "./CartContext";
+import React, { 
+  // useContext, 
+  useState } from "react";
+// import CartContext from "./CartContext";
 
 const AuthContext = React.createContext({
   token: "",

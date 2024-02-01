@@ -3,14 +3,11 @@ import classes from "./AuthForm.module.css";
 import { useRef, useState } from "react";
 import AuthContext from "../store/AuthContext";
 import { useNavigate } from "react-router-dom";
-// import { CardContent } from "@mui/material";
-// import CartContext from "../store/CartContext";
 
 const AuthForm = () => {
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
-  // const CartCntxt = useContext(CartContext);
   const [hasAccount, sethasAccount] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);

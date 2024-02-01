@@ -6,12 +6,6 @@ import Table from "react-bootstrap/Table";
 const Home = () => {
   return (
     <div
-    //   style={{
-    //     display: "flex",
-    //     flexDirection: "column",
-    //     alignItems: "center",
-    //     justifyContent: "center",
-    //   }}
     >
       <div
         style={{

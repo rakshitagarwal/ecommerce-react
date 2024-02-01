@@ -1,12 +1,5 @@
 import "./App.css";
-import {
-  // RouterProvider,
-  // createBrowserRouter,
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./components/Header/Header";
 import ProductList from "./Products/ProductList";
@@ -40,16 +33,7 @@ function App() {
         <Routes>
           <Route path="/" Component={Home} exact />
           <Route path="/about" Component={About} />
-          <Route
-            path="/store"
-            element={
-              authCntxt.isLoggedIn ? (
-                <ProductList />
-              ) : (
-                <Navigate to="/auth" replace></Navigate>
-              )
-            }
-          />
+          <Route path="/store" element={authCntxt.isLoggedIn ? (<ProductList />) : (<Navigate to="/auth" replace></Navigate>)} />
           <Route path="/contactus" Component={Contact} />
           <Route path="/auth" Component={AuthForm} />
         </Routes>

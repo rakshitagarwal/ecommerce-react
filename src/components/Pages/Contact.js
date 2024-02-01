@@ -34,25 +34,32 @@ function Contact() {
   const numberRef = useRef("");
 
   return (
-    <Form style={{ width: "70%", padding: 10 }} onSubmit={submitHandler}>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Name</Form.Label>
-        <Form.Control type="text" placeholder="Enter your name" ref={nameRef} />
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" ref={emailRef} />
-      </Form.Group>
+    <div style={{ alignItems:"center", paddingLeft:"500px", paddingTop:"100px"}}>
+      <h1>Contact Page</h1>
+      <Form style={{ width: "40%", padding: 10 }} onSubmit={submitHandler}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter your name"
+            ref={nameRef}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" ref={emailRef} />
+        </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Phone Number</Form.Label>
-        <Form.Control placeholder="Phone Number" ref={numberRef} />
-      </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Phone Number</Form.Label>
+          <Form.Control placeholder="Phone Number" ref={numberRef} />
+        </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-    </Form>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    </div>
   );
 }
 

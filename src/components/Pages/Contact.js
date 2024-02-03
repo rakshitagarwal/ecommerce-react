@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import classes from "./About.module.css";
 
 function Contact() {
   const submitHandler = (e) => {
@@ -16,7 +17,7 @@ function Contact() {
 
   async function addContact(contact) {
     const response = await fetch(
-      "https://ecommerce-a3b1b-default-rtdb.firebaseio.com/contacts.json",
+      "https://ecommerce-a08fc-default-rtdb.firebaseio.com/contacts.json",
       {
         method: "POST",
         body: JSON.stringify(contact),
@@ -34,32 +35,46 @@ function Contact() {
   const numberRef = useRef("");
 
   return (
-    <div style={{ alignItems:"center", paddingLeft:"500px", paddingTop:"100px"}}>
-      <h1>Contact Page</h1>
-      <Form style={{ width: "40%", padding: 10 }} onSubmit={submitHandler}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Name</Form.Label>
-          <Form.Control
-            type="text"
-            placeholder="Enter your name"
-            ref={nameRef}
-          />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Email address</Form.Label>
-          <Form.Control type="email" placeholder="Enter email" ref={emailRef} />
-        </Form.Group>
+    <>
+          <div className={classes.title}>The Generics</div>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Phone Number</Form.Label>
-          <Form.Control placeholder="Phone Number" ref={numberRef} />
-        </Form.Group>
+      <div
+        style={{
+          alignItems: "center",
+          paddingLeft: "500px",
+          paddingTop: "100px",
+        }}
+      >
+        <h1>Contact Page</h1>
+        <Form style={{ width: "40%", padding: 10 }} onSubmit={submitHandler}>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Name</Form.Label>
+            <Form.Control
+              type="text"
+              placeholder="Enter your name"
+              ref={nameRef}
+            />
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              placeholder="Enter email"
+              ref={emailRef}
+            />
+          </Form.Group>
 
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-      </Form>
-    </div>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Label>Phone Number</Form.Label>
+            <Form.Control placeholder="Phone Number" ref={numberRef} />
+          </Form.Group>
+
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </Form>
+      </div>
+    </>
   );
 }
 

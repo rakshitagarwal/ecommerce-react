@@ -58,7 +58,7 @@ const CartProvider = (props) => {
   useEffect(() => {
     const setDefaultValue = async () => {
       await fetch(
-        `https://ecommerce-a3b1b-default-rtdb.firebaseio.com/cart/${emailForCrud}.json`
+        `https://ecommerce-a08fc-default-rtdb.firebaseio.com/cart/${emailForCrud}.json`
       )
         .then((res) => {
           return res.json();
@@ -103,7 +103,7 @@ const CartProvider = (props) => {
       totalAmount: updatedAmount,
     });
     await fetch(
-      `https://ecommerce-a3b1b-default-rtdb.firebaseio.com/cart/${emailForCrud}.json`,
+      `https://ecommerce-a08fc-default-rtdb.firebaseio.com/cart/${emailForCrud}.json`,
       {
         method: "PUT",
         body: JSON.stringify({

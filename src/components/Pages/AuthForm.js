@@ -27,7 +27,7 @@ const AuthForm = () => {
     let url;
     if (hasAccount) {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAhQgKELbVmla-4qp1JmM6jMC76ONrMNP4";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyC8I5Pzq_xy0LW1iuHq1l4qZxXOt3Rm_z8";
       fetch(url, {
         method: "POST",
         body: JSON.stringify({
@@ -63,7 +63,7 @@ const AuthForm = () => {
       passwordRef.current.value = "";
     } else {
       url =
-        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyAhQgKELbVmla-4qp1JmM6jMC76ONrMNP4";
+        "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyC8I5Pzq_xy0LW1iuHq1l4qZxXOt3Rm_z8";
       fetch(url, {
         method: "POST",
         body: JSON.stringify({
@@ -97,7 +97,7 @@ const AuthForm = () => {
 
       let cart = {};
       fetch(
-        `https://crudcrud.com/api/61288f0e202d47d2b0fcf8b682a5f08c/cart${emailForCrud}`,
+        `https://crudcrud.com/api/67b06fac8166427399f545206351600e/cart${emailForCrud}`,
         {
           method: "POST",
           body: JSON.stringify(cart),
@@ -110,7 +110,7 @@ const AuthForm = () => {
         .catch((err) => console.log(err));
 
       fetch(
-        `https://ecommerce-a3b1b-default-rtdb.firebaseio.com/cart/${emailForCrud}.json`,
+        `https://ecommerce-a08fc-default-rtdb.firebaseio.com/cart/${emailForCrud}.json`,
         {
           method: "POST",
           body: JSON.stringify(cart),

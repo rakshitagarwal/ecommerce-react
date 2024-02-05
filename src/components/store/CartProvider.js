@@ -79,8 +79,7 @@ const CartProvider = (props) => {
   }, [emailForCrud]);
 
   const addItemToCartHandler = async (product) => {
-    const updatedAmount =
-      cartState.totalAmount + product.price * product.amount;
+    const updatedAmount = cartState.totalAmount + product.price * product.amount;
     const existingCartItemIndex = cartState.products.findIndex(
       ({ id }) => id === product.id
     );

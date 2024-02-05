@@ -1,7 +1,6 @@
-import React, { 
-  useState } from "react";
+import { createContext, useState } from "react";
 
-const AuthContext = React.createContext({
+const AuthContext = createContext({
   token: "",
   email: "",
   isLoggedIn: false,
@@ -20,7 +19,6 @@ export const AuthContextProvider = (props) => {
   const handleLogIn = (token, email) => {
     setToken(token);
     setEmail(email);
-    console.log(email);
     localStorage.setItem("token", token);
   };
 

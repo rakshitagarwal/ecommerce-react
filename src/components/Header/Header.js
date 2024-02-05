@@ -37,7 +37,9 @@ function Header(props) {
         <Nav className="justify-content-end" style={{ alignItems: "center" }}>
           {!authCntxt.isLoggedIn && (
             <NavLink to="/auth" style={{ padding: 5, margin: 5 }}>
-              Log In
+              <button style={{ padding: 5, margin: 5, background: "none" }}>
+                Log In
+              </button>
             </NavLink>
           )}
           {authCntxt.isLoggedIn && (

@@ -33,7 +33,7 @@ function App() {
         <Routes>
           <Route path="/" Component={Home} exact />
           <Route path="/about" Component={About} />
-          <Route path="/store" element={authCntxt.isLoggedIn ? (<ProductList />) : (<Navigate to="/auth" replace></Navigate>)} />
+          <Route path="/store" element={authCntxt.isLoggedIn ? (<ProductList />) : (<Navigate to="/auth" replace/>)} />
           <Route path="/contactus" Component={Contact} />
           <Route path="/auth" Component={AuthForm} />
         </Routes>
